@@ -1,0 +1,126 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, rgba(21, 21, 21, 0.8), rgba(48, 47, 46, 0.8)), url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: 'AXHIYADH CLOTHES';
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.626);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    text-align: center;
+    background: rgba(102, 99, 99, 0.8); /* Transparansi ditambahkan di sini */
+    padding: 30px; /* Menambah padding untuk membuat container lebih besar */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(63, 23, 23, 0.951);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    width: 90%; /* Menambah lebar container */
+    max-width: 600px; /* Membatasi lebar maksimum container */
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile img:hover {
+    transform: rotate(360deg);
+}
+
+.profile h1 {
+    margin: 10px 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.profile p {
+    color: #777;
+    font-size: 16px;
+}
+
+.links .link {
+    display: block;
+    margin: 15px 0;
+    padding: 15px;
+    background: rgba(78, 169, 132, 0.8); /* Transparansi ditambahkan di sini */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.links .link:hover {
+    background: rgba(150, 177, 207, 0.8); /* Transparansi ditambahkan di sini */
+    transform: translateY(-5px);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .profile h1 {
+        font-size: 24px;
+    }
+
+    .profile p {
+        font-size: 14px;
+    }
+
+    .links .link {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body::before {
+        font-size: 24px;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile h1 {
+        font-size: 20px;
+    }
+
+    .profile p {
+        font-size: 12px;
+    }
+
+    .links .link {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
